@@ -24,3 +24,12 @@
     }
   ]
 }
+{
+  "scripts": {
+    "install-pip": "npm install -g python3-pip"
+  }
+}{
+  "build": {
+    "command": "npm run install-pip && pip install -r requirements.txt && python manage.py collectstatic"
+  }
+}
