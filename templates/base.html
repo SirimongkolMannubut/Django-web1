@@ -12,8 +12,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="{% static "css/styles.css" %}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <title>Fireball Follow Mouse</title>
+        <link rel="stylesheet" href="fireboll.css">
     </head>
-    <body class="sb-nav-fixed">
+    <body
+     class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3 fs-3 fw-bold text-info" href='{% url "index" %}'>Sirimongkol</a>
@@ -49,10 +52,29 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 หน้าแรก
                             </a>
-                            <a class="nav-link" href='{% url "about" %}'>
+                            <a class="nav-link" href="{% url 'about' %}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 ประวัติ
                             </a>
+                            <a class="nav-link" href="{% url 'contact' %}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ติดต่อ
+                            </a>
+                            <a class="nav-link" href="{% url 'for_test' %}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ทดสอบ
+                            </a>
+                            <a class="nav-link" href="{% url 'card_template' %}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                card
+                            </a>
+                            
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                </nav>
+                            </div>
+                            
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Static Navigation</a>
@@ -90,5 +112,6 @@
         <script src="{% static "assets/demo/chart-bar-demo.js" %}"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="{% static "js/datatables-simple-demo.js" %}"></script>
+        
     </body>
 </html>

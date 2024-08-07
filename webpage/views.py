@@ -10,3 +10,14 @@ def aboutUs(request):
 
 def contactUs(request):
     return render(request, 'contact.html')
+
+def forPage (request):
+    context = {}
+    lt = list(range (0,100))
+    context["list"] = lt
+    
+    return render(request, 'for_test.html', context)
+from django.shortcuts import render
+
+def cardPage(request):
+    return render(request, 'card_template.html', {'range': range(100)})
