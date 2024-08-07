@@ -4,6 +4,7 @@
       {
         "src": "my_web3/wsgi.py",
         "use": "@vercel/python"
+        
       },
       {
         "src": "build_files.sh",
